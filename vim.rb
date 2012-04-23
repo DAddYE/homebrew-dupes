@@ -22,6 +22,7 @@ class Vim < Formula
                           "--enable-cscope",
                           "--with-ruby-command=/usr/bin/ruby",
                           "--with-features=huge"
+    system "iconv -c -t UTF-8 ./runtime/tools/efm_perl.pl > ./runtime/tools/efm_perl.pl"
     system "make"
     system "make install"
   end
